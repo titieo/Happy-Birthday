@@ -1,0 +1,38 @@
+{
+    "name": "birthday",
+    "packageManager": "yarn@3.1.1",
+    "scripts": {
+        "build": "NODE_ENV=production vite build",
+        "build-dev": "build && vite preview",
+        "dev": "NODE_ENV=development vite",
+        "format": "concurrently \"yarn:format:*\" && echo Please apply the diff",
+        "format:eslint": "echo Fixing Lint Issues With Eslint... && yarn eslint --ext .js --fix --quiet && echo Fix generated successfully. || (echo Fix failed! && exit 1)",
+        "format:prettier": "echo Fixing Lint Issues With Prettier... && yarn prettier -w . && echo Fix generated successfully. || (echo Fix failed! && exit 1)",
+        "lint": "concurrently \"yarn:lint:*\"",
+        "lint:eslint": "echo Linting With Eslint... &&  yarn eslint --ext .js --quiet && echo Lint passed.|| (echo Lint failed && exit 1)",
+        "lint:prettier": "echo Linting With Prettier... && yarn prettier --check . && echo Lint passed. || (echo Lint failed && exit 1)",
+        "lintci": "concurrently \"yarn:lintci:*\" && echo Please apply the following diff using git apply && git diff",
+        "lintci:eslint": "echo Linting With Eslint... &&  yarn eslint --format github --ext .js --quiet && echo Lint passed. || (echo Lint failed, attempting fix... && yarn eslint --ext .js --fix --quiet && echo Fix generated successfully. || (echo Fix failed! && exit 1))",
+        "lintci:prettier": "echo Linting With Prettier... && yarn prettier --check . && echo Lint passed. || (echo Lint failed, attempting fix... && yarn prettier -w . && echo Fix generated successfully. || (echo Fix failed! && exit 1))",
+        "min": "node ./squoosh"
+    },
+    "devDependencies": {
+        "@windicss/plugin-scrollbar": "^1.2.3",
+        "autoprefixer": "^10.4.0",
+        "concurrently": "^6.5.1",
+        "eslint": "^8.5.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "postcss": "^8.4.5",
+        "prettier": "^2.5.1",
+        "vite": "^2.7.6",
+        "vite-plugin-html": "^2.1.1",
+        "vite-plugin-windicss": "^1.6.1",
+        "windicss": "^3.4.0"
+    },
+    "dependencies": {
+        "alpinejs": "^3.7.1"
+    }
+}
