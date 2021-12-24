@@ -1,15 +1,14 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+    env: {
+        browser: true,
+        es2021: true,
     },
-    "extends": [
-        "standard"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 13,
-        "sourceType": "module"
+    extends: ['standard', 'prettier'],
+    parserOptions: {
+        ecmaVersion: 13,
+        sourceType: 'module',
     },
-    "rules": {
-    }
+    rules: {
+        'import/no-duplicates': false,
+    },
 };
