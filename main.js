@@ -1,6 +1,7 @@
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 import Alpine from 'alpinejs';
+import { doc } from 'prettier';
 
 window.Alpine = Alpine;
 
@@ -178,3 +179,13 @@ document.ontouchstart = evt => birthday.onClick(evt);
     then = now;
     birthday.update(delta / 1000);
 })();
+// End of Credit
+const balloon = document.getElementsByClassName('balloon');
+for (let i = 0; i < balloon.length - 2; i++) {
+    balloon[i].style.top = random(1, 40) + '%';
+    balloon[i].style.left = random(1, 80) + '%';
+}
+for (let i = balloon.length - 2; i < balloon.length; i++) {
+    balloon[i].style.bottom = random(1, 40) + '%';
+    balloon[i].style.right = random(1, 80) + '%';
+}
