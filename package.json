@@ -18,7 +18,7 @@
     },
     "devDependencies": {
         "@windicss/plugin-scrollbar": "^1.2.3",
-        "autoprefixer": "^10.4.0",
+        "autoprefixer": "^10.4.2",
         "concurrently": "^6.5.1",
         "eslint": "^8.5.0",
         "eslint-config-prettier": "^8.3.0",
