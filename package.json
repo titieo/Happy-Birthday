@@ -34,6 +34,6 @@
         "windicss": "^3.4.0"
     },
     "dependencies": {
-        "alpinejs": "^3.7.1"
+        "alpinejs": "^3.9.0"
     }
 }
