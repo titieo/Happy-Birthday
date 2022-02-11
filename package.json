@@ -29,7 +29,7 @@
         "postcss": "^8.4.5",
         "prettier": "^2.5.1",
         "vite": "^2.7.7",
-        "vite-plugin-html": "^2.1.1",
+        "vite-plugin-html": "^3.0.6",
         "vite-plugin-windicss": "^1.6.1",
         "windicss": "^3.4.0"
     },
