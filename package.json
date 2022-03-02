@@ -28,7 +28,7 @@
         "eslint-plugin-promise": "^6.0.0",
         "postcss": "^8.4.5",
         "prettier": "^2.5.1",
-        "vite": "^2.7.7",
+        "vite": "^2.8.6",
         "vite-plugin-html": "^2.1.1",
         "vite-plugin-windicss": "^1.6.1",
         "windicss": "^3.4.0"
